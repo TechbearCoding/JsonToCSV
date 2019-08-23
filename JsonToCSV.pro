@@ -25,14 +25,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        fileparser.cpp \
         main.cpp \
-        mainwindow.cpp
+        startform.cpp
 
 HEADERS += \
-        mainwindow.h
+    fileparser.h \
+    startform.h
 
 FORMS += \
-        mainwindow.ui
+    startform.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
