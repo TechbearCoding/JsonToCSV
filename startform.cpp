@@ -2,6 +2,7 @@
 #include "ui_startform.h"
 #include <QFile>
 #include <QFileDialog>
+#include "fileparser.h"
 
 startForm::startForm(QWidget *parent) :
     QWidget(parent),
@@ -20,8 +21,10 @@ void startForm::on_btnLoad_clicked()
     QFileDialog fileDiag;
     QString newUrl =fileDiag.getOpenFileName();
 
-    QFile file(newUrl);
+//    QFile file(newUrl);
 
+    FileParser parse;
+    parse.parseToJson(newUrl);
 
 
 }

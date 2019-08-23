@@ -2,6 +2,7 @@
 #define FILEPARSER_H
 
 #include <QFile>
+#include <QJsonParseError>
 
 
 class FileParser
@@ -9,7 +10,10 @@ class FileParser
 public:
     FileParser();
 
-    void parseToJson(QFile file);
+    void parseToJson(QString file);
+
+private:
+    QJsonParseError *err;
 };
 
 #endif // FILEPARSER_H
